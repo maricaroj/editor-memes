@@ -1,11 +1,49 @@
+:root{
+    --colorHeader:rgb(228, 224, 228);
+    --colorAside:rgb(250, 248, 248);
+    --colorBackground: rgb(244, 240, 247);
+    --colorAsideButton: rgb(184, 181, 185);
+    --colorAsideButtonHover: rgb(168, 164, 168);
+    --colorFont: rgb(41, 39, 39);
+    --FontPrimary: 'Yusei Magic', sans-serif;
+    --FontSecundary: 'Fredoka One', cursive;
+    --borderRadius: 5px;
+}
+ 
+body.dark-mode{
+    --colorHeader: rgb(23, 27, 34);
+    --colorAside: rgb(34, 37, 41);
+    --colorBackground: rgb(33, 38, 46);
+    --colorAsideButton: rgb(48, 54, 62);
+    --colorAsideButtonHover: rgb(63, 70, 78);
+    --colorFont: rgb(255, 255, 255);
+    --FontPrimary: 'Yusei Magic', sans-serif;
+    --FontSecundary: 'Fredoka One', cursive;
+    --borderRadius: 5px;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--colorFont);
 }
-/* .dark-mode{
-    
-} */
-/* .light-mode{
 
-} */
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--FontPrimary);
+}
+button{
+    cursor: pointer;
+}
+
+.display-none{
+    display: none;
+}
+
+
+
+
