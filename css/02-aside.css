@@ -189,7 +189,10 @@ input[type='range']:focus{
     background-color: var(--colorAsideButtonHover);
 }
 
-/* SECCION EDITOR TEXTO */
+
+/* 
+******************* SECCION EDITOR TEXTO *******************
+*/
 
 input[type='checkbox']{
     width: 10%;

@@ -61,9 +61,11 @@
     font-size: 1.2rem;
 }
 
+
 /* 
 *************** Seccion MEME ***************
  */
+
 
 .main-container{
     display: flex;
@@ -136,7 +138,9 @@
     color: white;
 }
 
+
 /* MEDIA QUERIES */
+
 @media (max-width: 1300px){
     .title{
         font-size: 1.8rem;
