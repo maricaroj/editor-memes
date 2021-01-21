@@ -1,0 +1,110 @@
+/* 
+****************************** Seccion MEME ******************************
+*/
+
+
+.main-container{
+    display: flex;
+    flex-grow: 1;
+}
+
+.container-section-meme{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorBackground);
+}
+
+.container-meme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 37.75rem;
+    height: 38rem;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+.image-text{
+    width: 100%;
+    padding: 35px 40px;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: var(--FontSecundary);
+    color: rgb(0, 0, 0);
+}
+
+#top-text{
+    top: 0;
+}
+
+#bottom-text{
+    bottom: 0;
+}
+
+.image-meme{
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+}
+
+.download-button{
+    min-width: 190px;
+    min-height: 40px;
+    font-family: var(--FontPrimary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-weight: 700;
+    color: rgb(31, 28, 37);
+    background: rgb(79, 209, 197);
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 8px 8px 20px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    top: 15px;
+    padding: 10px;
+}
+
+.download-button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(190px + 8px);
+    min-height: calc(40px + 8px);
+    border: 6px solid rgb(0, 255, 203);
+    box-shadow: 0 0 20px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.download-button:hover, .download-button:focus {
+    color: rgb(31, 28, 37);
+    transform: translateY(-2px);
+}
+
+.download-button:hover::before, .download-button:focus::before {
+    opacity: 1;
+}
+
+.download-button:hover::after, .download-button:focus::after {
+    animation: none;
+    display: none;
+}
+
+.green-button-icon{
+    color: rgb(31, 28, 37);
+}

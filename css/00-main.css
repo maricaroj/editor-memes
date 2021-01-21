@@ -12,7 +12,7 @@
  
 body.dark-mode{
     --colorHeader: rgb(44, 16, 94);
-    --colorAside: rgb(36, 7, 85);
+    --colorAside: rgb(29, 5, 70);
     --colorBackground:rgb(34, 13, 71); 
     --colorAsideButton: rgb(137,83,231);
     --colorAsideButtonHover: rgb(163, 69, 140);
@@ -21,7 +21,7 @@ body.dark-mode{
     --FontSecundary: 'Fredoka One', cursive;
     --borderRadius: 5px;
 }
-
+    
 
 *{
     margin: 0;
@@ -44,7 +44,3 @@ button{
 .display-none{
     display: none;
 }
-
-
-
-
