@@ -130,17 +130,16 @@
                         <!-- EDICION TEXTO SUPERIOR -->
                         <article class="aside-inputs">
                             <label  class="h3-title"for="top-text">SUPERIOR</label>
-                            <input type="text" name="top-text" id="top-text">
+                            <textarea type="text" name="top-text" id="top-text">TOP TEXT</textarea>
                             <div class="aside-inputs-row">
                                 <input type="checkbox" name="no-top-text" id="no-top-text">
                                 <label class="checkbox-label" for="no-top-text">Sin texto superior</label>
                             </div>
                         </article>
-
                         <!-- EDICION TEXTO INFERIOR -->
                         <article class="aside-inputs">
                             <label  class="h3-title" for="bottom-text">INFERIOR</label>
-                            <input type="text" name="bottom-text" id="bottom-text">
+                            <textarea type="text" name="bottom-text" id="bottom-text">BOTTOM TEXT</textarea>
                             <div class="aside-inputs-row">
                                 <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
                                 <label for="no-bottom-text">Sin texto inferior</label>
@@ -151,18 +150,18 @@
                         <article class="aside-inputs">
                             <label class="h3-title" for="font-type">FUENTE</label>
                             <select name="font-type" id="font-type">
-                                <option value="fredoka one">Fredoka One</option>
                                 <option value="arial">Arial</option>
                                 <option value="arial black">Arial Black</option>
                                 <option value="American Typewriter">American Typewriter</option>
                                 <option value="andale mono">Andale Mono</option>
+                                <option value="fredoka one">Fredoka One</option>
                                 <option value="helvetica">Helvetica</option>
                                 <option value="impact">Impact</option>
                                 <option value="verdana">Verdana</option>
                                 <option value="yusei magic">Yusei Magic</option>
                             </select>
                             <div class="aside-inputs-row font-buttons">
-                                <input type="number" name="font-size" id="font-size" min="12" max="80">
+                                <input type="number" name="font-size" id="font-size" min="12" max="80" value="35">
                                 <button id="left-text-button" class="aside-button font-button"><i class="fas fa-align-left button-icon-text" aria-hidden="true"></i></button>
                                 <button id="center-text-button" class="aside-button font-button"><i class="fas fa-align-center button-icon-text" aria-hidden="true"></i></button>
                                 <button id="right-text-button" class="aside-button font-button"><i class="fas fa-align-right button-icon-text" aria-hidden="true"></i></button>
@@ -206,7 +205,7 @@
                         <!-- EDICION ESPACIADO DE FUENTE -->
                         <article class="aside-input">
                             <label class="h3-title" for="font-spacing">ESPACIADO</label>
-                            <input type="number" id="font-spacing" min="10" max="50">
+                            <input type="number" id="font-spacing" min="10" max="50" value="35">
                         </article>
 
                         <!-- EDICION INTERLINEADO DE FUENTE -->

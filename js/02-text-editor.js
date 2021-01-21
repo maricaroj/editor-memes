@@ -23,11 +23,11 @@ const lineSpacing = document.getElementById('line-spacing');
 
 
 topTextInput.addEventListener('keyup',()=>{
-    topTextBox.innerHTML = topTextInput.value;
+    topTextBox.innerText = topTextInput.value;
 })
 
 bottomTextInput.addEventListener('keyup',()=>{
-    bottomTextBox.innerHTML = bottomTextInput.value;
+    bottomTextBox.innerText = bottomTextInput.value;
 })
 
 hideTopText.addEventListener('change',()=>{
@@ -99,11 +99,23 @@ outlineNone.addEventListener('click', ()=>{
     topTextBox.style.webkitTextStroke  = 'transparent';
     bottomTextBox.style.webkitTextStroke = 'transparent';
 });
+
 outlineLight.addEventListener('click', ()=>{
     topTextBox.style.webkitTextStroke  = '1px white';
     bottomTextBox.style.webkitTextStroke = '1px white';
 });
+
 outlineDark.addEventListener('click', ()=>{
     topTextBox.style.webkitTextStroke  = '2px black';
     bottomTextBox.style.webkitTextStroke = '2px black';
 });
+
+fontSpacing.addEventListener('input', ()=>{
+    topTextBox.style.padding = `${fontSpacing.value}px 0`;
+    bottomTextBox.style.padding = `${fontSpacing.value}px 0`;
+});
+
+lineSpacing.addEventListener('change', ()=>{
+    topTextBox.style.lineHeight = `${lineSpacing.value}`;
+    bottomTextBox.style.lineHeight = `${lineSpacing.value}`;
+})
