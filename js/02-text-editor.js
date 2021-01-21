@@ -111,8 +111,8 @@ outlineDark.addEventListener('click', ()=>{
 });
 
 fontSpacing.addEventListener('input', ()=>{
-    topTextBox.style.padding = `${fontSpacing.value}px 0`;
-    bottomTextBox.style.padding = `${fontSpacing.value}px 0`;
+    topTextBox.style.padding = `${fontSpacing.value}px 40px`;
+    bottomTextBox.style.padding = `${fontSpacing.value}px 40px`;
 });
 
 lineSpacing.addEventListener('change', ()=>{

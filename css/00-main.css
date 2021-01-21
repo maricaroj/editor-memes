@@ -1,22 +1,22 @@
 :root{
-    --colorHeader:rgb(228, 224, 228);
-    --colorAside:rgb(250, 248, 248);
-    --colorBackground: rgb(244, 240, 247);
-    --colorAsideButton: rgb(184, 181, 185);
-    --colorAsideButtonHover: rgb(168, 164, 168);
-    --colorFont: rgb(41, 39, 39);
+    --colorHeader:rgb(200,231,255);
+    --colorAside:rgb(208,209,255);
+    --colorBackground: rgb(224, 204, 250);
+    --colorAsideButton: rgb(160, 250, 253);
+    --colorAsideButtonHover: rgb(245, 160, 224);
+    --colorFont: rgb(32,8,73);
     --FontPrimary: 'Yusei Magic', sans-serif;
     --FontSecundary: 'Fredoka One', cursive;
     --borderRadius: 5px;
 }
  
 body.dark-mode{
-    --colorHeader: rgb(23, 27, 34);
-    --colorAside: rgb(34, 37, 41);
-    --colorBackground: rgb(33, 38, 46);
-    --colorAsideButton: rgb(48, 54, 62);
-    --colorAsideButtonHover: rgb(63, 70, 78);
-    --colorFont: rgb(255, 255, 255);
+    --colorHeader: rgb(44, 16, 94);
+    --colorAside: rgb(36, 7, 85);
+    --colorBackground:rgb(34, 13, 71); 
+    --colorAsideButton: rgb(137,83,231);
+    --colorAsideButtonHover: rgb(163, 69, 140);
+    --colorFont: rgb(231, 224, 243);
     --FontPrimary: 'Yusei Magic', sans-serif;
     --FontSecundary: 'Fredoka One', cursive;
     --borderRadius: 5px;

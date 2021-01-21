@@ -12,7 +12,7 @@
     padding: 2px ;
 }
 
-.title{
+/* .title{
     text-align: center;
     font-family: var(--FontPrimary);
     font-size: 2.5rem;
@@ -21,7 +21,27 @@
     margin: 0 1.3%;
     letter-spacing: -0.2px;
     -webkit-text-stroke: transparent;
-}
+} */
+
+.title{
+    display: inline;
+    position: relative;
+    font: 2.5rem var(--FontPrimary);
+    color: rgba(0, 0, 255, 0.938); 
+    padding: 1% 0;
+    margin: 0 1.3%;
+    letter-spacing: -0.1px;
+    text-align: center;
+  }
+  
+  .title:after {
+    content: "Generador de Memes";
+    /* text-align: center; */
+    position: absolute; left: -10.1px; top: 11px;
+    color: rgba(255,0,0,0.5);   
+    padding: 1% 0;
+    margin: 0 1.3%;
+  }
 
 .header-buttons{
     width: 100%;
@@ -87,7 +107,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 38.75rem;
+    max-width: 37.75rem;
     height: 38rem;
     background-color: rgb(0, 0, 0);
     position: relative;
@@ -95,7 +115,7 @@
 
 .image-text{
     width: 100%;
-    padding: 35px 50px;
+    padding: 35px 40px;
     font-size: 35px;
     font-weight: bold;
     background-color: rgb(255, 255, 255);
@@ -119,25 +139,60 @@
 }
 
 .download-button{
-    background-color: rgb(44, 155, 94);
+    min-width: 190px;
+    min-height: 40px;
+    font-family: var(--FontPrimary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    font-weight: 700;
+    color: rgb(31, 28, 37);
+    background: rgb(79, 209, 197);
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
     border: none;
+    border-radius: 1000px;
+    box-shadow: 8px 8px 20px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
     outline: none;
-    color: white;
-    border-radius: var(--borderRadius);
-    padding: 15px;
-    font-size: 16px;
-    margin: 1rem 0 ;
+    position: relative;
+    top: 15px;
+    padding: 10px;
 }
 
-.download-button:hover,
-.download-button:focus{
-    background-color: rgb(28, 131, 74);
+
+.download-button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(190px + 8px);
+    min-height: calc(40px + 8px);
+    border: 6px solid rgb(0, 255, 203);
+    box-shadow: 0 0 20px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+    
+.download-button:hover, .download-button:focus {
+    color: rgb(31, 28, 37);
+    transform: translateY(-2px);
+}
+    
+.download-button:hover::before, .download-button:focus::before {
+    opacity: 1;
+}
+
+.download-button:hover::after, .download-button:focus::after {
+    animation: none;
+    display: none;
 }
 
 .green-button-icon{
-    color: white;
+    color: rgb(31, 28, 37);
 }
-
 
 /* MEDIA QUERIES */
 

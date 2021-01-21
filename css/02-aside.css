@@ -6,7 +6,7 @@
     background-color: var(--colorAside);
     box-shadow: 0px 2px 3px 5px rgba(0, 0, 0, 0.068);
     padding: 10px 10px;
-    overflow: scroll;
+    overflow: hidden;
     position: fixed;
     right: 0;
     top: 0;
@@ -150,7 +150,7 @@ input[type='color']::-webkit-color-swatch-wrapper{
 input[type='range']{
     width: 95%;
     height: 6px;
-    background-color: rgb(71, 69, 69);
+    background-color: var(--colorAsideButtonHover);
     appearance: none;
     border-radius: 10px;
     margin-bottom: 7px;
@@ -246,5 +246,6 @@ input[type='number']{
 @media(max-width: 700px){
     .section-aside{
         width: 100%;
+        overflow: scroll;
     }
 }
