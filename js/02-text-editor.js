@@ -88,10 +88,17 @@ fontBackSelector.addEventListener('input',()=>{
 hideBackText.addEventListener('change',()=>{
     if(hideBackText.checked){
         topTextBox.style.backgroundColor = 'transparent';
+        topTextBox.style.position = 'absolute';
+        topTextBox.style.top = '0';
         bottomTextBox.style.backgroundColor = 'transparent';
+        bottomTextBox.style.position = 'absolute';
+        bottomTextBox.style.bottom = '0';
+
     }else{
         topTextBox.style.backgroundColor = `${fontBackSelector.value}`;
+        topTextBox.style.position = 'static';
         bottomTextBox.style.backgroundColor = `${fontBackSelector.value}`;
+        bottomTextBox.style.position = 'static';
     }
 });
 

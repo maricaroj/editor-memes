@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--colorBackground);
+    position: relative;
 }
 
 .container-meme{
@@ -38,14 +39,6 @@
     text-align: center;
     font-family: var(--FontSecundary);
     color: rgb(0, 0, 0);
-}
-
-#top-text{
-    top: 0;
-}
-
-#bottom-text{
-    bottom: 0;
 }
 
 .image-meme{

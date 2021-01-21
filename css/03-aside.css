@@ -199,10 +199,9 @@ input[type='checkbox']{
 }
 
 input[type='number']{
-    padding: 0 8px;
+    padding: 0 10px;
     height: 34px;
     margin-top: 7px;
-    text-align: center;
 }
 
 #font-type{
