@@ -109,14 +109,6 @@
     margin: 2.5px;
 }
 
-.header-buttons .button:first-child{
-    margin-left: 0;
-}
-
-.header-buttons .button:last-child{
-    margin-right: 0;
-}
-
 .button:hover,
 .button:focus{
     background-color: var(--colorAsideButtonHover);

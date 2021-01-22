@@ -9,15 +9,17 @@ const brightnessFilter = document.getElementById('brightness');
 const opacityFilter = document.getElementById('opacity');
 const contrastFilter = document.getElementById('contrast');
 const blurFilter = document.getElementById('blur');
-const greyscaleFilter = document.getElementById('greyscale');
+const grayscaleFilter = document.getElementById('grayscale');
 const sepiaFilter = document.getElementById('sepia');
 const hueFilter = document.getElementById('hue');
-const saturateFilter = document.getElementById('saturation');
+const saturateFilter = document.getElementById('saturate');
 const invertFilter = document.getElementById('invert');
+const resetFiltersButton = document.getElementById('reset-filters-button');
 
-urlImage.addEventListener('keyup', ()=>{
+urlImage.addEventListener('keyup', (e)=>{
+    e.preventDefault();
     const valueUrl = urlImage.value;
-    imageMeme.style.backgroundImage = `url(${valueUrl})`;
+    imageMeme.style.backgroundImage = `url("${valueUrl}")`;
     imageMeme.style.backgroundPosition = 'center';
 
 })
@@ -35,30 +37,29 @@ blendColorStyle.addEventListener('change',()=>{
 
 // FILTROS 
 
-brightnessFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `brightness(${brightnessFilter.value})`;
-})
-opacityFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `opacity(${opacityFilter.value})`;
-})
-contrastFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `contrast(${contrastFilter.value})%`;
-})
-blurFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `blur(${blurFilter.value}px)`;
-})
-greyscaleFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `greyscale(${greyscaleFilter.value})%`;
-})
-sepiaFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `sepia(${sepiaFilter.value})%`;
-})
-hueFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `hue-rotate(${hueFilter.value})deg`;
-})
-saturateFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `saturate(${saturateFilter.value})%`;
-})
-invertFilter.addEventListener('change', ()=>{
-    imageMeme.style.filter = `invert(${invertFilter.value})`;
-})
+const filtrosImagen = () =>{
+    imageMeme.style.filter = `brightness(${brightnessFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) grayscale(${grayscaleFilter.value}%) sepia(${sepiaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturateFilter.value}%) invert(${invertFilter.value})`;
+};
+
+brightnessFilter.addEventListener('change', filtrosImagen);
+opacityFilter.addEventListener('change', filtrosImagen);
+contrastFilter.addEventListener('change', filtrosImagen);
+blurFilter.addEventListener('change', filtrosImagen);
+grayscaleFilter.addEventListener('change', filtrosImagen);
+sepiaFilter.addEventListener('change', filtrosImagen);
+hueFilter.addEventListener('change', filtrosImagen);
+saturateFilter.addEventListener('change', filtrosImagen);
+invertFilter.addEventListener('change', filtrosImagen);
+
+resetFiltersButton.addEventListener('click', ()=>{
+    brightnessFilter.value = '1';
+    opacityFilter.value= '1';
+    contrastFilter.value= '100';
+    blurFilter.value= '0';
+    grayscaleFilter.value = '0';
+    sepiaFilter.value = '0';
+    hueFilter.value= '0';
+    saturateFilter.value = '100';
+    invertFilter.value = '0';
+    filtrosImagen;
+});
