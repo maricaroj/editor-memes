@@ -49,6 +49,7 @@
 .aside-inputs-row{
     display: flex;
     flex-direction: row;
+    /* width: 98%; */
 }
 
 .aside-inputs{
@@ -99,7 +100,9 @@ select:hover, select:focus{
     background-color: var(--colorAsideButtonHover);
 }
 
-
+.image-background-color{
+    width: 98%;
+}
 .color-inputs{
     position: relative;
     width: 100%;
@@ -227,7 +230,13 @@ input[type='number']{
     left: 40px;
 
 }
-
+#font-back{
+    /* margin-right: 10px; */
+    width: 8.2rem;
+}
+.outline-buttons{
+    width: 98%;
+}
 .text-outline-button{
     margin-top: 0;
 }

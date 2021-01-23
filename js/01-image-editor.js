@@ -22,17 +22,17 @@ urlImage.addEventListener('keyup', (e)=>{
     imageMeme.style.backgroundImage = `url("${valueUrl}")`;
     imageMeme.style.backgroundPosition = 'center';
 
-})
+});
 
 imageBackColor.addEventListener('input', ()=>{
     const valueImageBack = imageBackColor.value;
     imageMeme.style.backgroundColor = valueImageBack;
     backColorMemeText.innerHTML = valueImageBack.toUpperCase();
-})
+});
 
 blendColorStyle.addEventListener('change',()=>{  
     imageMeme.style.backgroundBlendMode = blendColorStyle.value;
-})
+});
 
 
 // FILTROS 

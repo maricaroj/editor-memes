@@ -20,7 +20,7 @@
     <meta property="twitter:description" content="Editor generador de memes, aplicacion manipular texto e imagen">
     <meta property="twitter:image" content="https://github.com/maricaroj/editor-memes/blob/master/img/00-generador-memes.png?raw=true">
     <!-- LINKS -->
-    <link rel="shortcut icon" href="./img/favicon copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/348feffef2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
@@ -37,10 +37,10 @@
         <header class="header-content">
             <h1 class="title">Generador de Memes</h1>
             <section class="header-buttons">
-                <button class="button" id="image-button"><i class="far fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
-                <button class="button" id="text-button"><i class="fas fa-font button-icon-text" aria-hidden="true"></i>Texto</button>
-                <button class="button" id="light-button"><i class="far fa-sun button-icon-text" aria-hidden="true"></i>Modo Claro</button>
-                <button class="button display-none" id="dark-button"><i class="far fa-moon button-icon-text" aria-hidden="true"></i>Modo Oscuro</button>
+                <button class="button" id="image-button" aria-label="Editor Imagen"><i class="far fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
+                <button class="button" id="text-button" aria-label="Editor Texto"><i class="fas fa-font button-icon-text" aria-hidden="true"></i>Texto</button>
+                <button class="button" id="light-button" aria-label="Cambiar a Modo Oscuro"><i class="far fa-sun button-icon-text" aria-hidden="true"></i>Modo Claro</button>
+                <button class="button display-none" id="dark-button" aria-label="Cambiar a Modo Claro"><i class="far fa-moon button-icon-text" aria-hidden="true"></i>Modo Oscuro</button>
             </section>
         </header>
         <!-- *** TERMINA HEADER *** -->
@@ -48,9 +48,9 @@
         <!-- *** COMIENZA MAIN *** -->
         <main class="main-container" >
             <section class="container-section-meme">
-                <article class="container-meme">
+                <article id="container-meme" class="container-meme">
                     <p id="top-text-box" class="image-text">TOP TEXT</p>
-                    <div id="image-meme" class="image-meme"></div>
+                    <div id="image-meme" class="image-meme" aria-label="Imagen de meme"></div>
                     <p id="bottom-text-box" class="image-text">BOTTOM TEXT</p>
                 </article>
                 <button class="download-button">
@@ -58,10 +58,10 @@
                     <i class="fas fa-download button-icon-text green-button-icon" aria-hidden="true"></i>
                 </button>
             </section>
-
+ 
         <!-- *** COMIENZA SECCION EDITOR IMAGEN *** -->
             <section class="section-aside" id="principal-aside-container">
-                <button class="section-aside-button" id="aside-button">
+                <button class="section-aside-button" id="aside-button" aria-label="cerrar barra lateral">
                     <i class="fas fa-times" aria-hidden="true"></i>
                   </button>
                 <aside id="image-editor-panel">
@@ -71,7 +71,7 @@
                         <!-- AGREGAR URL IMAGEN -->
                         <article class="aside-inputs">
                             <label class="h3-title" for="url">URL</label>
-                            <input type="text" name="url" id="url">
+                            <input type="text" name="url" id="url" aria-label="Direccion U R L imagen">
                         </article>
 
                         <!-- EDITAR COLOR FONDO IMAGEN -->
@@ -79,10 +79,10 @@
                             <h3 class="h3-title">FONDO</h3>
                             <div class="aside-inputs-row image-background-color">
                                 <div class="color-inputs">
-                                    <input type="color" name="back-color" id="back-color" value="#ffffff">
-                                    <span id="background-color-meme">#ffffff</span>
+                                    <input type="color" name="back-color" id="back-color" value="#ffffff" aria-label="Selector de color de fondo imagen">
+                                    <span id="background-color-meme" aria-hidden="true">#ffffff</span>
                                 </div>
-                                <select id="back-styles-mode" class="back-styles">
+                                <select id="back-styles-mode" class="back-styles" aria-label="Selector tipo de blend fondo">
                                     <option value="unset">Ninguno</option>
                                     <option value="lighten">Aclarar</option>
                                     <option value="darken">Oscurecer</option>
@@ -149,7 +149,7 @@
                         <!-- EDICION TEXTO SUPERIOR -->
                         <article class="aside-inputs">
                             <label  class="h3-title"for="top-text">SUPERIOR</label>
-                            <textarea type="text" name="top-text" id="top-text">TOP TEXT</textarea>
+                            <textarea type="text" name="top-text" id="top-text" aria-label="Escribe el texto superior del meme">TOP TEXT</textarea>
                             <div class="aside-inputs-ro image-background-colorw">
                                 <input type="checkbox" name="no-top-text" id="no-top-text">
                                 <label class="checkbox-label" for="no-top-text">Sin texto superior</label>
@@ -158,8 +158,8 @@
                         <!-- EDICION TEXTO INFERIOR -->
                         <article class="aside-inputs">
                             <label  class="h3-title" for="bottom-text">INFERIOR</label>
-                            <textarea type="text" name="bottom-text" id="bottom-text">BOTTOM TEXT</textarea>
-                            <div class="aside-inputs-ro image-background-colorw">
+                            <textarea type="text" name="bottom-text" id="bottom-text" aria-label="Escribe el texto inferior del meme">BOTTOM TEXT</textarea>
+                            <div class="aside-inputs-row">
                                 <input type="checkbox" name="no-bottom-text" id="no-bottom-text">
                                 <label for="no-bottom-text">Sin texto inferior</label>
                             </div>
@@ -168,7 +168,7 @@
                         <!-- EDICION TIPO Y TAMAÑO DE TEXTO -->
                         <article class="aside-inputs">
                             <label class="h3-title" for="font-type">FUENTE</label>
-                            <select name="font-type" id="font-type">
+                            <select name="font-type" id="font-type" aria-label="Selecciona el tipo de fuente">
                                 <option value="arial">Arial</option>
                                 <option value="arial black">Arial Black</option>
                                 <option value="American Typewriter">American Typewriter</option>
@@ -180,10 +180,10 @@
                                 <option value="yusei magic">Yusei Magic</option>
                             </select>
                             <div class="aside-inputs-row font-buttons">
-                                <input type="number" name="font-size" id="font-size" min="12" max="80" value="35">
-                                <button id="left-text-button" class="aside-button font-button"><i class="fas fa-align-left button-icon-text" aria-hidden="true"></i></button>
-                                <button id="center-text-button" class="aside-button font-button"><i class="fas fa-align-center button-icon-text" aria-hidden="true"></i></button>
-                                <button id="right-text-button" class="aside-button font-button"><i class="fas fa-align-right button-icon-text" aria-hidden="true"></i></button>
+                                <input type="number" name="font-size" id="font-size" min="12" max="80" value="35" aria-label="Tamaño de fuente">
+                                <button id="left-text-button" class="aside-button font-button" aria-label="Justificar texto izquierda"><i class="fas fa-align-left button-icon-text" aria-hidden="true"></i></button>
+                                <button id="center-text-button" class="aside-button font-button" aria-label="Justificar texto centro"><i class="fas fa-align-center button-icon-text" aria-hidden="true"></i></button>
+                                <button id="right-text-button" class="aside-button font-button" aria-label="Justificar texto derecha"><i class="fas fa-align-right button-icon-text" aria-hidden="true"></i></button>
                             </div>
                         </article>
 
@@ -193,15 +193,15 @@
                                 <div class="aside-input color-editor">
                                     <label  class="h3-title" for="font-color">COLOR</label>
                                     <div class="aside-inputs-row color-inputs">
-                                        <input type="color" name="font-color" id="font-color" value="#000000">
-                                        <span id="font-color-text">#000000</span>
+                                        <input type="color" name="font-color" id="font-color" value="#000000" aria-label="Selecciona color texto">
+                                        <span id="font-color-text" aria-hidden="true">#000000</span>
                                     </div>
                                 </div>
                                 <div class="aside-input color-editor">
                                     <label  class="h3-title" for="font-back">FONDO</label>
                                     <div class="aside-inputs-row color-inputs">
-                                        <input type="color" name="font-back" id="font-back" value="#ffffff">
-                                        <span id="font-back-text">#ffffff</span>
+                                        <input type="color" name="font-back" id="font-back" value="#ffffff" aria-label="Selecciona color de fondo del texto">
+                                        <span id="font-back-text" aria-hidden="true">#ffffff</span>
                                     </div>
                                 </div>
                             </div>
@@ -214,10 +214,10 @@
                         <!-- EDICION CONTORNO DE FUENTE -->
                         <article class="aside-input">
                             <h3 class="h3-title">CONTORNO</h3>
-                            <div class="aside-inputs-row">
-                                <button id="outline-text-none" class="aside-button text-outline-button">Ninguno</button>
-                                <button id="outline-text-light" class="aside-button text-outline-button">Claro</button>
-                                <button id="outline-text-dark" class="aside-button text-outline-button">Oscuro</button>
+                            <div class="aside-inputs-row outline-buttons">
+                                <button id="outline-text-none" class="aside-button text-outline-button" aria-label="Sin contorno de texto">Ninguno</button>
+                                <button id="outline-text-light" class="aside-button text-outline-button" aria-label="Contorno de texto claro">Claro</button>
+                                <button id="outline-text-dark" class="aside-button text-outline-button" aria-label="Contorno de texto oscuro">Oscuro</button>
                             </div>
                         </article>
 

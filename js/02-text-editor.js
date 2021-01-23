@@ -125,4 +125,4 @@ fontSpacing.addEventListener('input', ()=>{
 lineSpacing.addEventListener('change', ()=>{
     topTextBox.style.lineHeight = `${lineSpacing.value}`;
     bottomTextBox.style.lineHeight = `${lineSpacing.value}`;
-})
+});
