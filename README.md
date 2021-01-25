@@ -31,7 +31,7 @@ C = selector de color de fuente
    - Leer variables: X, A, B, C
    - hacer: agregar el evento a X (determinar cual evento utilizaremos)
         - Si (X esta seleccionado) entonces
-            - hacer: aplicar tanto a A como a B estilos: color de fondo = transparente y, posición = absoluta. Aplicar posición superior = 0 para A y posicion inferior = 0 para B.
+            - hacer: aplicar tanto a A como a B estilos: color de fondo = transparente y, posición = absoluta. Aplicar posición superior = 0 para A y posición inferior = 0 para B.
         - SiNo 
             - hacer: aplicar tanto a A como a B estilos: color de fondo = C y, posición = estatica.
         - Fin-Si<br>
