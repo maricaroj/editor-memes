@@ -15,7 +15,7 @@ Proyecto realizado como evaluación final del segundo modulo del curso desarroll
 ***Este proyecto no necesita la instalación de ninguna dependencia.*** 📌
 <br><br>
 
-# ⚙ Pseudocódigo de la sección Fondo Transparente del Texto
+# ⚙ Pseudocódigo sección Fondo Transparente del Texto
 ¿Cómo hacer para que el fondo del texto superior e inferior se transparente cuando seleccionamos el checkbox de **fondo transparente** y al deseleccionarlo sea del color elegido?
 
 ### Variables
