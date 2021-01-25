@@ -66,9 +66,6 @@ const tamaño = () =>{
         bottomTextBox.style.fontSize = `${textSize}px`;
         topTextBox.style.padding = `${paddSize}px 40px`
         bottomTextBox.style.padding = `${paddSize}px 40px`;
-
-        fontSize.value = textSize;
-        fontSpacing.value = paddSize;
     };
     window.addEventListener('resize', tamaño)
 ;}
