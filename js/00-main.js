@@ -46,7 +46,7 @@ asideCloseButton.addEventListener('click', ()=>{
 
 // ajustando el tamaño del contenedor del meme, ajustando el tamaño de letra y el padding de top y bottom text, ocultando aside cuando el width sea menor a 1100px
 
-window.addEventListener('resize', ()=>{
+const tamaño = () =>{
     if(window.innerWidth > 1100){
         asideContainer.style.display = 'block';
     } else{
@@ -67,4 +67,9 @@ window.addEventListener('resize', ()=>{
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
     };
-});
+;}
+    
+window.addEventListener('resize', tamaño)
+    
+
+window.onload = tamaño;
