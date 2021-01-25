@@ -3,6 +3,7 @@ const imageEditorPanel = document.getElementById('image-editor-panel');
 const textEditorPanel = document.getElementById('text-editor-panel');
 const asideContainer = document.getElementById('principal-aside-container');
 const memeContainer = document.getElementById('container-meme');
+const downloadButton = document.getElementById('download-button');
 
 const imgButton = document.getElementById('image-button');
 const textButton = document.getElementById('text-button');
@@ -12,7 +13,6 @@ const asideCloseButton = document.getElementById('aside-button');
 
 
 // Botones del header
-
 
 imgButton.addEventListener('click', ()=>{
     asideContainer.style.display = 'block';
@@ -37,32 +37,33 @@ darkButton.addEventListener('click', ()=>{
     document.body.classList.remove('dark-mode')
 })
 
+
+// Boton cerrar barra lateral
+
 asideCloseButton.addEventListener('click', ()=>{
     asideContainer.style.display ='none';
 })
 
-window.addEventListener('resize', ()=>{
-        const windowSize = (memeContainer.getBoundingClientRect().width) / 16;
-        console.log(windowSize);
-        memeContainer.style.height = `${windowSize}rem`;
-})
+// ajustando el tamaño del contenedor del meme, ajustando el tamaño de letra y el padding de top y bottom text, ocultando aside cuando el width sea menor a 1100px
 
 window.addEventListener('resize', ()=>{
-    if(window.innerWidth > 1100){
-        return
+    if(window.innerWidth > 1300){
+        asideContainer.style.display = 'block';
     } else{
-        console.log(window.innerWidth);
+        asideContainer.style.display = 'none';
+
+        const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
+        memeContainer.style.height = `${memeContainerSize}rem`;
+
         const windowSize = window.innerWidth / 10
         const textSize = Math.round(windowSize * 0.4);
-        console.log(textSize);
         const paddSize = Math.round(windowSize * 0.3);
-        console.log(paddSize);
-    
         
         topTextBox.style.fontSize = `${textSize}px`;
         bottomTextBox.style.fontSize = `${textSize}px`;
-        topTextBox.style.padding = `${paddSize}px 50px`
-        bottomTextBox.style.padding = `${paddSize}px 50px`;
+        topTextBox.style.padding = `${paddSize}px 40px`
+        bottomTextBox.style.padding = `${paddSize}px 40px`;
+
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
     };
