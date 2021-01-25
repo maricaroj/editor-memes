@@ -51,10 +51,12 @@ fontType.addEventListener('change',()=>{
     bottomTextBox.style.fontFamily = `${fontType.value}`;
 });
 
-fontSize.addEventListener('input',()=>{
+const sizeFont = () =>{
     topTextBox.style.fontSize = `${fontSize.value}px`;
     bottomTextBox.style.fontSize = `${fontSize.value}px`;
-});
+}
+fontSize.addEventListener('input', sizeFont);
+
 
 alignTextLetf.addEventListener('click',()=>{
     topTextBox.style.textAlign = 'left';
@@ -117,10 +119,11 @@ outlineDark.addEventListener('click', ()=>{
     bottomTextBox.style.webkitTextStroke = '2px black';
 });
 
-fontSpacing.addEventListener('input', ()=>{
+const spacingFont = () =>{
     topTextBox.style.padding = `${fontSpacing.value}px 40px`;
     bottomTextBox.style.padding = `${fontSpacing.value}px 40px`;
-});
+}
+fontSpacing.addEventListener('input', spacingFont);
 
 lineSpacing.addEventListener('change', ()=>{
     topTextBox.style.lineHeight = `${lineSpacing.value}`;

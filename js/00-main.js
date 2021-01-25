@@ -64,10 +64,15 @@ const tamaño = () =>{
         
         topTextBox.style.fontSize = `${textSize}px`;
         bottomTextBox.style.fontSize = `${textSize}px`;
-        topTextBox.style.padding = `${paddSize}px 40px`
+        topTextBox.style.padding = `${paddSize}px 40px`;
         bottomTextBox.style.padding = `${paddSize}px 40px`;
-    };
-    window.addEventListener('resize', tamaño)
-;}
+
+        fontSize.value = textSize;
+        fontSpacing.value = paddSize;
+
+        sizeFont;
+        spacingFont;
+    }
+    window.addEventListener('resize', tamaño);
+};
     window.onload = tamaño;
-    
