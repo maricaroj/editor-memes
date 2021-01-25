@@ -70,9 +70,7 @@ const tamaño = () =>{
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
     };
+    window.addEventListener('resize', tamaño)
 ;}
+    window.onload = tamaño;
     
-window.addEventListener('resize', tamaño)
-    
-
-// window.onload = tamaño;
