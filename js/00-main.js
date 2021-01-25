@@ -75,4 +75,4 @@ const tamaño = () =>{
 window.addEventListener('resize', tamaño)
     
 
-window.onload = tamaño;
+// window.onload = tamaño;
