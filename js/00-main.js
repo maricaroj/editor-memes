@@ -11,8 +11,7 @@ const lightButton = document.getElementById('light-button');
 const darkButton = document.getElementById('dark-button');
 const asideCloseButton = document.getElementById('aside-button');
 
-
-// Botones del header
+// Botones Header
 
 imgButton.addEventListener('click', ()=>{
     asideContainer.style.display = 'block';
@@ -37,28 +36,45 @@ darkButton.addEventListener('click', ()=>{
     document.body.classList.remove('dark-mode')
 })
 
-
 // Boton cerrar barra lateral
-
 asideCloseButton.addEventListener('click', ()=>{
     asideContainer.style.display ='none';
 })
 
-// ajustando el tamaño del contenedor del meme, ajustando el tamaño de letra y el padding de top y bottom text, ocultando aside cuando el width sea menor a 1100px
-window.addEventListener('resize', ()=>{
+
+// Ocultando barra lateral despues de los 1300px
+const hideAside = () =>{
     if(window.innerWidth > 1300){
         asideContainer.style.display = 'block';
+    } else{
+        asideContainer.style.display = 'none'
     }
-});
+}
+window.addEventListener('resize', hideAside);
 
-const tamaño = () =>{
+
+// Ajustando tamaño caja Meme imagen y texto
+
+const resizeMeme = () =>{
+    const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
+    memeContainer.style.height = `${memeContainerSize}rem`;
+}
+
+const sizeFont = () =>{
+    topTextBox.style.fontSize = `${fontSize.value}px`;
+    bottomTextBox.style.fontSize = `${fontSize.value}px`;
+}
+
+const spacingFont = () =>{
+    topTextBox.style.padding = `${fontSpacing.value}px 40px`;
+    bottomTextBox.style.padding = `${fontSpacing.value}px 40px`;
+}
+
+const resizeTextBox = () =>{
     if(window.innerWidth > 1100){
         return
     } else{
-        const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
-        memeContainer.style.height = `${memeContainerSize}rem`;
-
-        const windowSize = window.innerWidth / 10
+        const windowSize = window.innerWidth / 10;
         const textSize = Math.round(windowSize * 0.4);
         const paddSize = Math.round(windowSize * 0.3);
         
@@ -66,13 +82,27 @@ const tamaño = () =>{
         bottomTextBox.style.fontSize = `${textSize}px`;
         topTextBox.style.padding = `${paddSize}px 40px`;
         bottomTextBox.style.padding = `${paddSize}px 40px`;
-
+        
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
-
+        
         sizeFont;
         spacingFont;
     }
-    window.addEventListener('resize', tamaño);
 };
-    window.onload = tamaño;
+const ajustesTexto = ()=>{
+    fontSize.addEventListener('input', sizeFont);
+    fontSpacing.addEventListener('input', spacingFont);
+    window.addEventListener('resize', resizeTextBox); 
+}
+
+const ajustesMeme = () =>{
+    window.addEventListener('resize', resizeMeme); 
+}
+
+const aplicarAjustes = () =>{
+    ajustesTexto();
+    ajustesMeme();
+}
+
+window.onload = aplicarAjustes;
