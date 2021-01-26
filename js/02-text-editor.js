@@ -50,6 +50,9 @@ fontType.addEventListener('change',()=>{
     topTextBox.style.fontFamily = `${fontType.value}`;
     bottomTextBox.style.fontFamily = `${fontType.value}`;
 });
+fontSize.addEventListener('input', sizeFont);
+
+fontSpacing.addEventListener('input', spacingFont);
 
 alignTextLetf.addEventListener('click',()=>{
     topTextBox.style.textAlign = 'left';

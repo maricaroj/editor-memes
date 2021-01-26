@@ -91,18 +91,13 @@ const resizeTextBox = () =>{
         
         sizeFont();
         spacingFont();
-        window.addEventListener('resize', resizeMeme);
     }
 };
-const ajustesTexto = ()=>{
-    fontSize.addEventListener('input', sizeFont);
-    fontSpacing.addEventListener('input', spacingFont);
-    window.addEventListener('resize', resizeTextBox); 
+
+const tamañoMeme = () =>{
+    window.addEventListener('resize', resizeMeme); 
 }
 
+window.addEventListener('resize', resizeTextBox); 
 
-const aplicarAjustes = () =>{
-    ajustesTexto();
-}
-
-window.onload = aplicarAjustes;
+window.onload = tamañoMeme;
