@@ -50,7 +50,7 @@ const hideAside = () =>{
         asideContainer.style.display = 'none'
     }
 }
-window.addEventListener('resize', hideAside);
+// window.addEventListener('resize', hideAside);
 
 
 // Ajustando tamaño caja Meme imagen y texto
