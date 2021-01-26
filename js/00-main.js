@@ -53,12 +53,16 @@ const hideAside = () =>{
 window.addEventListener('resize', hideAside);
 
 
-// Ajustando tamaño caja Meme imagen y texto
+// Ajustando tamaño caja Meme imagen
 
 const resizeMeme = () =>{
     const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
     memeContainer.style.height = `${memeContainerSize}rem`;
 }
+
+window.addEventListener('resize', resizeMeme);
+
+// Ajustando tamaño texto meme
 
 const sizeFont = () =>{
     topTextBox.style.fontSize = `${fontSize.value}px`;
@@ -96,13 +100,4 @@ const ajustesTexto = ()=>{
     window.addEventListener('resize', resizeTextBox); 
 }
 
-const ajustesMeme = () =>{
-    window.addEventListener('resize', resizeMeme); 
-}
-
-const aplicarAjustes = () =>{
-    ajustesTexto();
-    ajustesMeme();
-}
-
-window.onload = aplicarAjustes;
+window.onload = ajustesTexto;
