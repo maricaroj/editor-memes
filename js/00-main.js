@@ -78,8 +78,6 @@ const resizeTextBox = () =>{
         
         sizeFont();
         spacingFont();
-
-        hideAside();
     } 
 
 };
