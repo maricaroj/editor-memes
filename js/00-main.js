@@ -53,15 +53,7 @@ const hideAside = () =>{
 window.addEventListener('resize', hideAside);
 
 
-// Ajustando tamaño caja Meme imagen
-
-const resizeMeme = () =>{
-    const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
-    memeContainer.style.height = `${memeContainerSize}rem`;
-}
-
-
-// Ajustando tamaño caja Meme texto
+// Ajustando tamaño caja Meme imagen y texto 
 
 const sizeFont = () =>{
     topTextBox.style.fontSize = `${fontSize.value}px`;
@@ -77,6 +69,8 @@ const resizeTextBox = () =>{
     if(window.innerWidth > 1100){
         return
     } else{
+        const memeContainerSize = (memeContainer.getBoundingClientRect().width) / 16;
+        memeContainer.style.height = `${memeContainerSize}rem`;
         const windowSize = window.innerWidth / 10;
         const textSize = Math.round(windowSize * 0.4);
         const paddSize = Math.round(windowSize * 0.3);
@@ -89,15 +83,15 @@ const resizeTextBox = () =>{
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
         
-        sizeFont;
-        spacingFont;
+        sizeFont();
+        spacingFont();
+
+        window.addEventListener('resize', resizeTextBox); 
     }
 };
 const ajustesTexto = ()=>{
     fontSize.addEventListener('input', sizeFont);
     fontSpacing.addEventListener('input', spacingFont);
-    window.addEventListener('resize', resizeTextBox); 
-    window.addEventListener('resize', resizeMeme);
 }
 
 
