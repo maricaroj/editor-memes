@@ -43,18 +43,18 @@ asideCloseButton.addEventListener('click', ()=>{
 
 
 // Ocultando barra lateral despues de los 1300px
-const hideAside = () =>{
-    if(window.innerWidth > 1300){
-        asideContainer.style.display = 'block';
-    } else{
-        asideContainer.style.display = 'none'
-    }
+if(window.innerWidth > 1300){
+    window.addEventListener('resize', ()=>{
+        if(window.innerWidth > 1100){
+            asideContainer.style.display = 'block';
+        } else {
+            asideContainer.style.display ='none';
+        }
+    })
 }
-// window.addEventListener('resize', hideAside);
 
 
 // Ajustando tamaño caja Meme imagen y texto
-
 
 
 const resizeTextBox = () =>{
@@ -78,7 +78,10 @@ const resizeTextBox = () =>{
         
         sizeFont();
         spacingFont();
+
+        hideAside();
     } 
+
 };
 
 
