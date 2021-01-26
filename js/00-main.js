@@ -78,8 +78,7 @@ const resizeTextBox = () =>{
         
         sizeFont();
         spacingFont();
-    }
-    window.addEventListener('resize', resizeTextBox); 
+    } 
 };
 
 
