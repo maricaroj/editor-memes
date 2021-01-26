@@ -61,8 +61,7 @@ const resizeMeme = () =>{
 }
 
 
-
-// Ajustando tamaño texto meme
+// Ajustando tamaño caja Meme texto
 
 const sizeFont = () =>{
     topTextBox.style.fontSize = `${fontSize.value}px`;
@@ -90,15 +89,20 @@ const resizeTextBox = () =>{
         fontSize.value = textSize;
         fontSpacing.value = paddSize;
         
-        sizeFont();
-        spacingFont();
+        sizeFont;
+        spacingFont;
     }
 };
-const ajustes= ()=>{
+const ajustesTexto = ()=>{
     fontSize.addEventListener('input', sizeFont);
     fontSpacing.addEventListener('input', spacingFont);
     window.addEventListener('resize', resizeTextBox); 
     window.addEventListener('resize', resizeMeme);
 }
 
-window.onload = ajustes;
+
+const aplicarAjustes = () =>{
+    ajustesTexto();
+}
+
+window.onload = aplicarAjustes;
