@@ -26,6 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Gorditas:wght@700&family=Hachi+Maru+Pop&family=Carter+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/00-main.css">
     <link rel="stylesheet" href="./css/01-header.css">
     <link rel="stylesheet" href="./css/02-section-meme.css">
@@ -37,10 +39,10 @@
         <header class="header-content">
             <h1 class="title">Generador de Memes</h1>
             <section class="header-buttons">
-                <button class="button" id="image-button" aria-label="Editor Imagen"><i class="far fa-file-image button-icon-text" aria-hidden="true"></i>Imagen</button>
-                <button class="button" id="text-button" aria-label="Editor Texto"><i class="fas fa-font button-icon-text" aria-hidden="true"></i>Texto</button>
-                <button class="button" id="light-button" aria-label="Cambiar a Modo Oscuro"><i class="far fa-sun button-icon-text" aria-hidden="true"></i>Modo Claro</button>
-                <button class="button display-none" id="dark-button" aria-label="Cambiar a Modo Claro"><i class="far fa-moon button-icon-text" aria-hidden="true"></i>Modo Oscuro</button>
+                <button class="button" id="image-button" aria-label="Editor Imagen"><i class="far fa-file-image button-icon-text icon-header" aria-hidden="true"></i>Imagen</button>
+                <button class="button" id="text-button" aria-label="Editor Texto"><i class="fas fa-font button-icon-text icon-header" aria-hidden="true"></i>Texto</button>
+                <button class="button" id="light-button" aria-label="Cambiar a Modo Oscuro"><i class="far fa-sun button-icon-text icon-header" aria-hidden="true"></i>Modo Claro</button>
+                <button class="button display-none" id="dark-button" aria-label="Cambiar a Modo Claro"><i class="far fa-moon button-icon-text icon-header" aria-hidden="true"></i>Modo Oscuro</button>
             </section>
         </header>
         <!-- *** TERMINA HEADER *** -->
@@ -53,7 +55,7 @@
                     <div id="image-meme" class="image-meme" aria-label="Imagen de meme"></div>
                     <p id="bottom-text-box" class="image-text">BOTTOM TEXT</p>
                 </article>
-                <button class="download-button">
+                <button id="download-button" class="download-button">
                     Descargar Meme
                     <i class="fas fa-download button-icon-text green-button-icon" aria-hidden="true"></i>
                 </button>
@@ -169,12 +171,12 @@
                         <article class="aside-inputs">
                             <label class="h3-title" for="font-type">FUENTE</label>
                             <select name="font-type" id="font-type" aria-label="Selecciona el tipo de fuente">
-                                <option value="arial">Arial</option>
+                                <option value="Acme">Acme</option>
                                 <option value="arial black">Arial Black</option>
-                                <option value="American Typewriter">American Typewriter</option>
-                                <option value="andale mono">Andale Mono</option>
+                                <option value="Carter One">Carter One</option>
                                 <option value="fredoka one">Fredoka One</option>
-                                <option value="helvetica">Helvetica</option>
+                                <option value="Gorditas">Gorditas</option>
+                                <option value="Hachi Maru Pop">Hachi Maru Pop</option>
                                 <option value="impact">Impact</option>
                                 <option value="verdana">Verdana</option>
                                 <option value="yusei magic">Yusei Magic</option>
@@ -244,6 +246,7 @@
             </section>
             <!-- *** TERMINA SECCION EDITOR TEXTO *** -->
         </main>
+        <!-- *** TERMINA MAIN *** -->
 
     <script src="./js/00-main.js"></script>
     <script src="./js/01-image-editor.js"></script>

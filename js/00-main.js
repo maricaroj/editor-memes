@@ -1,4 +1,3 @@
-
 const imageEditorPanel = document.getElementById('image-editor-panel');
 const textEditorPanel = document.getElementById('text-editor-panel');
 const asideContainer = document.getElementById('principal-aside-container');
@@ -41,11 +40,14 @@ asideCloseButton.addEventListener('click', ()=>{
     asideContainer.style.display ='none';
 })
 
+downloadButton.addEventListener('click', ()=>{
+    alert('funciono')
+});
 
 // Ocultando barra lateral despues de los 1300px
 if(window.innerWidth > 1300){
     window.addEventListener('resize', ()=>{
-        if(window.innerWidth > 1100){
+        if(window.innerWidth > 1150){
             asideContainer.style.display = 'block';
         } else {
             asideContainer.style.display ='none';
@@ -57,7 +59,7 @@ if(window.innerWidth > 1300){
 // Ajustando tamaño caja Meme imagen y texto
 
 
-const resizeTextBox = () =>{
+const resizeMemeBox = () =>{
     if(window.innerWidth > 1100){
         return
     } else{
@@ -82,5 +84,4 @@ const resizeTextBox = () =>{
 
 };
 
-
-window.onload = resizeTextBox;
+window.onload = resizeMemeBox;
