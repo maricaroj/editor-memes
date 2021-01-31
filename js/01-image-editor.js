@@ -61,5 +61,5 @@ resetFiltersButton.addEventListener('click', ()=>{
     hueFilter.value= '0';
     saturateFilter.value = '100';
     invertFilter.value = '0';
-    filtrosImagen;
+    filtrosImagen();
 });

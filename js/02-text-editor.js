@@ -80,10 +80,14 @@ fontColorSelector.addEventListener('input',()=>{
 })
 
 fontBackSelector.addEventListener('input',()=>{
-    const valueBack = fontBackSelector.value;
-    topTextBox.style.backgroundColor = valueBack;
-    bottomTextBox.style.backgroundColor = valueBack;
-    fontBackText.innerHTML = valueBack.toUpperCase();
+    if(hideBackText.checked){
+        return
+    } else {
+        const valueBack = fontBackSelector.value;
+        topTextBox.style.backgroundColor = valueBack;
+        bottomTextBox.style.backgroundColor = valueBack;
+        fontBackText.innerHTML = valueBack.toUpperCase();
+    }
 })
 
 hideBackText.addEventListener('change',()=>{
