@@ -245,9 +245,10 @@ input[type='number']{
         display: none;
     }
 }
-@media(max-width: 750px){
+@media(max-width: 700px){
     .section-aside{
         width: 100%;
         overflow: scroll;
+        display: none;
     }
 }
