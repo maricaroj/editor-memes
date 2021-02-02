@@ -80,9 +80,7 @@ fontColorSelector.addEventListener('input',()=>{
 })
 
 fontBackSelector.addEventListener('input',()=>{
-    if(hideBackText.checked){
-        return
-    } else {
+    if(!hideBackText.checked){
         const valueBack = fontBackSelector.value;
         topTextBox.style.backgroundColor = valueBack;
         bottomTextBox.style.backgroundColor = valueBack;
