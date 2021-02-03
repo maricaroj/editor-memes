@@ -35,10 +35,12 @@
     padding: 2.18rem 2.5rem;
     font-size: 2.18rem;
     font-weight: bold;
+    font-family: 'Arial Rounded MT';
     background-color: rgb(255, 255, 255);
     text-align: center;
     color: rgb(0, 0, 0);
     position: relative;
+    overflow: hidden;
 }
 
 .image-meme{

@@ -14,35 +14,42 @@ const asideCloseButton = document.getElementById('aside-button');
 
 imgButton.addEventListener('click', ()=>{
     asideContainer.style.display = 'block';
-    imageEditorPanel.classList.remove('display-none')
+    imageEditorPanel.classList.remove('display-none');
     textEditorPanel.classList.add('display-none');
-})
+});
 
 textButton.addEventListener('click', ()=>{
     asideContainer.style.display = 'block';
     textEditorPanel.classList.remove('display-none');
     imageEditorPanel.classList.add('display-none');
-})
+});
 
 lightButton.addEventListener('click', ()=>{
-    lightButton.classList.add('display-none')
-    darkButton.classList.remove('display-none')
-    document.body.classList.add('dark-mode')
-})
+    lightButton.classList.add('display-none');
+    darkButton.classList.remove('display-none');
+    document.body.classList.add('dark-mode');
+});
 darkButton.addEventListener('click', ()=>{
-    lightButton.classList.remove('display-none')
-    darkButton.classList.add('display-none')
-    document.body.classList.remove('dark-mode')
-})
+    lightButton.classList.remove('display-none');
+    darkButton.classList.add('display-none');
+    document.body.classList.remove('dark-mode');
+});
 
 // Boton cerrar barra lateral
 asideCloseButton.addEventListener('click', ()=>{
     asideContainer.style.display ='none';
-})
+});
+
+
+// Boton de descarga
 
 downloadButton.addEventListener('click', ()=>{
-    alert('funciono')
+    domtoimage.toBlob(memeContainer)
+    .then(function (blob) {
+        saveAs(blob, 'mi-meme.png');
+    });
 });
+
 
 // Ocultando barra lateral despues de los 1300px
 if(window.innerWidth > 1300){
@@ -51,13 +58,12 @@ if(window.innerWidth > 1300){
             asideContainer.style.display = 'block';
         } else {
             asideContainer.style.display ='none';
-        }
-    })
-}
+        };
+    });
+};
 
 
 // Ajustando tamaño caja Meme imagen y texto
-
 
 const resizeMemeBox = () =>{
     if(window.innerWidth > 1100){
@@ -80,7 +86,7 @@ const resizeMemeBox = () =>{
         
         sizeFont();
         spacingFont();
-    } 
+    };
 
 };
 

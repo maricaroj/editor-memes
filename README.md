@@ -1,4 +1,4 @@
-# Editor de Memes
+# Editor de Memes 🎭
 
 Aplicación para editar texto e imagen de un meme que se puede descargar para compartirla en las redes sociales.
 Proyecto realizado como evaluación final del segundo modulo del curso desarrollo FrontEnd, utilizando **JavaScript** para modificar dinámicamente el contenido y las propiedades de la imagen y el texto.
@@ -12,7 +12,13 @@ Proyecto realizado como evaluación final del segundo modulo del curso desarroll
 ![Generador de Memes](./img/01-generador-memes-oscuro.png)
 
 
-***Este proyecto no necesita la instalación de ninguna dependencia.*** 📌
+📌 ***Este proyecto utiliza las siguientes dependencias para la descarga de la imagen:.*** 
+
+📁 [DOM To Image](https://github.com/tsayen/dom-to-image)
+<br>
+
+📁  [FileServer.js](https://github.com/eligrey/FileSaver.js)
+
 <br><br>
 
 # ⚙ Pseudocódigo sección Fondo Transparente del Texto
@@ -29,7 +35,7 @@ C = selector de color de fuente
 ### Pseudocódigo
 - *Inicio*
    - Leer variables: X, A, B, C
-   - hacer: agregar el evento a X (determinar cual evento utilizaremos)
+   - Hacer: agregar el evento a X (determinar cual evento utilizaremos)
         - Si (X esta seleccionado) entonces
             - hacer: aplicar tanto a A como a B estilos: color de fondo = transparente y, posición = absoluta. Aplicar posición superior = 0 para A y posición inferior = 0 para B.
         - SiNo 

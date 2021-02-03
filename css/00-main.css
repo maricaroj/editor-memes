@@ -19,7 +19,7 @@ body.dark-mode{
     --colorFont: rgb(231, 224, 243);
     --FontPrimary: 'Yusei Magic', sans-serif;
     --FontSecundary: 'Fredoka One', cursive;
-    --borderRadius: 5px;
+    --borderRadius: 8px;
 }
     
 
