@@ -36,9 +36,7 @@ darkButton.addEventListener('click', ()=>{
 });
 
 // Boton cerrar barra lateral
-asideCloseButton.addEventListener('click', ()=>{
-    asideContainer.style.display ='none';
-});
+asideCloseButton.addEventListener('click', ()=> asideContainer.style.display ='none');
 
 
 // Boton de descarga
@@ -87,7 +85,6 @@ const resizeMemeBox = () =>{
         sizeFont();
         spacingFont();
     };
-
 };
 
 window.onload = resizeMemeBox;

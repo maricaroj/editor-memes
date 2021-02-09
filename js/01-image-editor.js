@@ -16,6 +16,7 @@ const saturateFilter = document.getElementById('saturate');
 const invertFilter = document.getElementById('invert');
 const resetFiltersButton = document.getElementById('reset-filters-button');
 
+// Agregar Imagen
 urlImage.addEventListener('keyup', (e)=>{
     e.preventDefault();
     const valueUrl = urlImage.value;
@@ -24,18 +25,18 @@ urlImage.addEventListener('keyup', (e)=>{
 
 });
 
+
+// Mezcla de color fondo
 imageBackColor.addEventListener('input', ()=>{
     const valueImageBack = imageBackColor.value;
     imageMeme.style.backgroundColor = valueImageBack;
     backColorMemeText.innerHTML = valueImageBack.toUpperCase();
 });
 
-blendColorStyle.addEventListener('change',()=>{  
-    imageMeme.style.backgroundBlendMode = blendColorStyle.value;
-});
+blendColorStyle.addEventListener('change',()=> imageMeme.style.backgroundBlendMode = blendColorStyle.value);
 
 
-// FILTROS 
+// Filtros Imagen 
 
 const filtrosImagen = () =>{
     imageMeme.style.filter = `brightness(${brightnessFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) grayscale(${grayscaleFilter.value}%) sepia(${sepiaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturateFilter.value}%) invert(${invertFilter.value})`;

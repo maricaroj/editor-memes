@@ -21,15 +21,12 @@ const outlineDark = document.getElementById('outline-text-dark');
 const fontSpacing = document.getElementById('font-spacing');
 const lineSpacing = document.getElementById('line-spacing');
 
+// Agregar texto meme
+topTextInput.addEventListener('keyup',()=> topTextBox.innerText = topTextInput.value);
 
-topTextInput.addEventListener('keyup',()=>{
-    topTextBox.innerText = topTextInput.value;
-})
+bottomTextInput.addEventListener('keyup',()=> bottomTextBox.innerText = bottomTextInput.value);
 
-bottomTextInput.addEventListener('keyup',()=>{
-    bottomTextBox.innerText = bottomTextInput.value;
-})
-
+// Ocultar texto meme
 hideTopText.addEventListener('change',()=>{
     if(hideTopText.checked){
         topTextBox.classList.add('display-none');
@@ -46,17 +43,20 @@ hideBottomText.addEventListener('change',()=>{
     }
 });
 
+// Cambiar tipo de funte
 fontType.addEventListener('change',()=>{
     topTextBox.style.fontFamily = `${fontType.value}`;
     bottomTextBox.style.fontFamily = `${fontType.value}`;
 });
 
+// Cambiar tamaño de fuente
 const sizeFont = () =>{
     topTextBox.style.fontSize = `${fontSize.value}px`;
     bottomTextBox.style.fontSize = `${fontSize.value}px`;
 }
 fontSize.addEventListener('input', sizeFont);
 
+// Alinear texto
 alignTextLetf.addEventListener('click',()=>{
     topTextBox.style.textAlign = 'left';
     bottomTextBox.style.textAlign = 'left'; 
@@ -72,6 +72,7 @@ alignTextRight.addEventListener('click',()=>{
     bottomTextBox.style.textAlign = 'right'; 
 });
 
+// Cambiar color de fuente
 fontColorSelector.addEventListener('input',()=>{
     const valueColor = fontColorSelector.value;
     topTextBox.style.color = valueColor;
@@ -79,6 +80,7 @@ fontColorSelector.addEventListener('input',()=>{
     fontColorText.innerHTML = valueColor.toUpperCase();
 })
 
+// Cambiar color fondo texto meme
 fontBackSelector.addEventListener('input',()=>{
     if(!hideBackText.checked){
         const valueBack = fontBackSelector.value;
@@ -88,6 +90,7 @@ fontBackSelector.addEventListener('input',()=>{
     }
 })
 
+// Fondo transparente
 hideBackText.addEventListener('change',()=>{
     if(hideBackText.checked){
         topTextBox.style.backgroundColor = 'transparent';
@@ -105,6 +108,7 @@ hideBackText.addEventListener('change',()=>{
     }
 });
 
+// Agregar/Quitar borde de texto
 outlineNone.addEventListener('click', ()=>{
     topTextBox.style.webkitTextStroke  = 'transparent';
     bottomTextBox.style.webkitTextStroke = 'transparent';
@@ -120,12 +124,15 @@ outlineDark.addEventListener('click', ()=>{
     bottomTextBox.style.webkitTextStroke = '2px black';
 });
 
+// Cambiar espaciado
+
 const spacingFont = () =>{
     topTextBox.style.padding = `${fontSpacing.value}px 40px`;
     bottomTextBox.style.padding = `${fontSpacing.value}px 40px`;
 }
 fontSpacing.addEventListener('input', spacingFont);
 
+// Cambiar interlineado
 lineSpacing.addEventListener('change', ()=>{
     topTextBox.style.lineHeight = `${lineSpacing.value}`;
     bottomTextBox.style.lineHeight = `${lineSpacing.value}`;
