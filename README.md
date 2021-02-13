@@ -29,7 +29,7 @@ Proyecto realizado como evaluación final del segundo modulo del curso desarroll
 X = checkbox
 A = caja superior de texto
 B = caja inferior de texto
-C = selector de color de fuente
+C = selector de color de fondo texto
 ```
 
 ### Pseudocódigo
